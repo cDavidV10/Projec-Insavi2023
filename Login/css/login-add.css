@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+.registro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "contenido contenido contenido"
+    "mensaje mensaje mensaje";
+  align-content: space-evenly;
+  gap: 0.25rem;
+  width: 25%;
+  height: 75vh;
+  background-color: #e3e3e3;
+  box-shadow: 16px 16px 32px #c8c8c8, -10px -10px 25px #fefefe;
+  padding: 1.5rem;
+  margin: 12vh auto;
+  border-radius: 1.5rem;
+}
+
+.registro__title {
+  padding-top: 0.5rem;
+  transition: letter-spacing 300ms ease;
+  grid-area: header;
+  text-align: center;
+}
+
+.registro__title:hover {
+  letter-spacing: 0.5rem;
+}
+
+.registro__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  height: 100%;
+  padding: 0.5rem;
+  grid-area: contenido;
+}
+
+.registro__cont {
+  padding: 5px;
+  position: relative;
+}
+
+.registro__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.9rem;
+  transform: translate(1.25rem, 1rem);
+  transition: transform 500ms ease-in-out, background-color 500ms ease-in-out,
+    color 500ms ease-in-out;
+  letter-spacing: 3px;
+}
+
+.registro__svg {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  cursor: pointer;
+  z-index: 20;
+  transition: display 300ms ease-in-out;
+}
+
+.oculto {
+  display: none;
+}
+
+.registro__input {
+  position: relative;
+  height: 2.7em;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 15px;
+  font-size: 1rem;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.registro__input:focus ~ .registro__text,
+.registro__input:valid ~ .registro__text {
+  transform: translate(7.5rem, -0.7rem);
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.registro__input:focus ~ .registro__text--usuario,
+.registro__input:valid ~ .registro__text--usuario {
+  transform: translate(10rem, -0.7rem);
+}
+
+.registro__input:focus,
+.registro__input:valid {
+  border: solid 2px;
+}
+
+.registro__btn {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  transition: scale 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out, color 300ms ease-in-out;
+  background-color: transparent;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn:active {
+  scale: 0.9;
+}
+
+.btn__text {
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  margin: 0.1rem 0.5rem;
+}
+
+.iniciar__sesion,
+.crear__cuenta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+
+.mensaje {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  grid-area: mensaje;
+}
+
+.mensaje__exito,
+.mensaje__error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: #2a932b;
+  color: #fff;
+  padding: 0.3rem;
+  font-size: 0.95rem;
+  border-radius: 0.25rem;
+}
+
+.mensaje__error {
+  background-color: #eb3131;
+}

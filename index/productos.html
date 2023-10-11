@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="title"><h1>Titulo</h1></section>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__item">
+            <a href="index-usuario.html" class="nav__a">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="productos.html" class="nav__a">Productos</a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__a">Contacto</a></li>
+        </ul>
+      </nav>
+      <section class="user">
+        <article class="user__name" id="username"></article>
+        <article class="user__info" id="info">
+          <div class="carrito">
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M6 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+              <path d="M17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+              <path d="M17 17H6V3H4"></path>
+              <path d="m6 5 14 1-1 7H6"></path>
+            </svg>
+            <span class="carrito__text">Tu carrito</span>
+          </div>
+          <button class="user__btn" id="close">Cerrar sesion</button>
+        </article>
+      </section>
+    </header>
+  </body>
+  <script src="js/usuario.js"></script>
+  <script src="js/validar.js"></script>
+  <script src="js/close.js"></script>
+</html>
