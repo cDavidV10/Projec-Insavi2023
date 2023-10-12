@@ -2,7 +2,7 @@
 
 $conexion = mysqli_connect ("localhost", "root", "", "proyecto");
 
-$user = $_POST['user'];
+// $user = $_POST['user'];
 $root = -10;
 
 function encriptar ($password, $root){
@@ -22,7 +22,9 @@ if (!$conexion){
     return;
 } 
 
-  $consulta = mysqli_query ($conexion, "SELECT * FROM usuarios where user = '$user'");
+  $consulta = mysqli_query ($conexion, "SELECT * FROM usuarios");
+
+
 
     $rows= array();
 
@@ -30,15 +32,12 @@ if (!$conexion){
     array_push($rows, $r);
 }
 
- $objeto = $rows[0];
+foreach ($rows as $objeto) {
+    $datos[] = array("user" => $objeto->user, "password" => encriptar($objeto->password, $root));
+}
 
+$mysql_json = json_encode($datos, JSON_UNESCAPED_UNICODE);
 
- $datos = array($objeto->user, $objeto->password =  encriptar($objeto->password, $root)) ;
-
- 
-
-$mysql_json = json_encode($objeto, 128);
-
-echo $mysql_json
+echo $mysql_json;
 
 ?>

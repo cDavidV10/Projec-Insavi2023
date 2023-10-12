@@ -14,7 +14,6 @@ async function ingresar() {
       body: datos,
     });
     const results = await response.json();
-    console.log(results);
 
     if (results === "admin") {
       location.href =
@@ -45,6 +44,7 @@ mostrar.addEventListener("click", () => {
     svg2.classList.remove("oculto");
   }
 });
+
 ocultar.addEventListener("click", () => {
   if (password.type == "text") {
     password.type = "password";

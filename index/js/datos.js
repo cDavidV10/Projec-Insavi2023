@@ -1,8 +1,54 @@
 const apiUrl = "http://localhost/prueba-projec_final/index/php/info.php";
-const form = document.getElementById("form");
+const formModificar = document.getElementById("formModificar");
 const infoUser = document.getElementById("info-user");
 const infoPassword = document.getElementById("info-password");
-const span = document.getElementById("span");
+const accion = document.getElementById("accion");
+
+async function modificarApi() {
+  try {
+    const datos = new FormData(formModificar);
+    const response = await fetch(
+      "http://localhost/prueba-projec_final/index/php/cambiarContra.php",
+      {
+        method: "POST",
+        body: datos,
+      }
+    );
+    const res = document.getElementById("mensaje");
+    const results = await response.json();
+
+    if (results === "exito") {
+      const mensaje = document.createElement("p");
+      mensaje.classList.add("mensaje__exito");
+      mensaje.textContent = "Datos Actualizados correctamente";
+      res.appendChild(mensaje);
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 2000);
+    }
+
+    if (results === "error") {
+      const mensaje = document.createElement("p");
+      mensaje.classList.add("mensaje__error");
+      mensaje.textContent = "Las contraseñas no coinciden";
+      res.appendChild(mensaje);
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 2000);
+    }
+  } catch (error) {}
+}
+
+function modificarForm() {
+  formModificar.classList.add("form-modificar__activo");
+
+  const cerrarModal = document.getElementById("cerrar__modal");
+
+  cerrarModal.addEventListener("click", () => {
+    formModificar.classList.remove("form-modificar__activo");
+    location.reload();
+  });
+}
 
 function mostrar(user, password) {
   const usuario = document.createElement("p");
@@ -14,39 +60,48 @@ function mostrar(user, password) {
   contra.textContent = password;
   contra.classList.add("info__item");
   infoPassword.appendChild(contra);
+
+  const articleAccion = document.createElement("article");
+  const eliminrar = document.createElement("p");
+  const modificar = document.createElement("p");
+
+  articleAccion.classList.add("accion");
+  articleAccion.classList.add("info__item");
+  eliminrar.classList.add("accion__item");
+  modificar.classList.add("accion__item");
+
+  eliminrar.textContent = "Eliminar";
+  modificar.textContent = "Modificar";
+
+  articleAccion.appendChild(modificar);
+  articleAccion.appendChild(eliminrar);
+
+  accion.appendChild(articleAccion);
+
+  modificar.addEventListener("click", () => {
+    modificarForm();
+    const inputUser = document.getElementById("inputUser");
+    inputUser.value = user;
+    formModificar.addEventListener("submit", (e) => {
+      e.preventDefault();
+      modificarApi();
+    });
+  });
 }
 
 async function user() {
   try {
-    const value = new FormData(form);
-    const response = await fetch(apiUrl, {
-      method: "POST",
-      body: value,
-    });
+    const response = await fetch(apiUrl);
     const results = await response.json();
 
-    console.log(results);
+    const datos = results;
 
-    mostrar(results.user, results.password);
-    form.reset();
+    for (let i = 0; i < datos.length; i++) {
+      mostrar(datos[i].user, datos[i].password);
+    }
   } catch (error) {
     console.log(error);
-    const body = document.querySelector("body");
-    const mensajeError = document.createElement("p");
-    mensajeError.textContent = "El usuario no existe";
-    mensajeError.classList.add("mensaje__error");
-
-    body.appendChild(mensajeError);
-
-    setTimeout(() => {
-      mensajeError.style.display = "none";
-    }, 3000);
-
-    form.reset();
   }
 }
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  user();
-});
+user();

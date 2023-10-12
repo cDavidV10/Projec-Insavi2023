@@ -6,7 +6,6 @@ async function datos() {
     const response = await fetch(userUrl);
     const results = await response.json();
 
-    console.log(results);
     if (results == null || results == "") {
       location.href = "http://localhost/prueba-projec_final/Login/login.html";
 

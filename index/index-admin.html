@@ -4,20 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mantenimiento</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
   <body>
+    <form class="form-modificar" id="formModificar">
+      <article class="form-modificar__header">
+        <svg class="cerrar__modal" id="cerrar__modal" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="m18.75 6.82-1.57-1.57L12 10.43 6.82 5.25 5.25 6.82 10.43 12l-5.18 5.18 1.57 1.57L12 13.57l5.18 5.18 1.57-1.57L13.57 12l5.18-5.18Z"></path>
+      </svg>
+      <h3>Modificar Usuario</h3>
+      </article>
+      <article class="contra">
+        <label for="inputUser">Nombre de Usuari0</label><input class="form-modificar__input" type="text" id="inputUser" name="user">
+        <label for="contra">Nueva Contraseña</label><input class="form-modificar__input" type="text" id="contra" name="newpassword">
+        <label for="newcontra">Confirmar Contraseña</label><input class="form-modificar__input" type="text" id="newcontra" name="confirmpassword">
+      </article>
+      <article class="form-modificar__btn">
+        <button class="btn">Guardar cambios</button>
+      </article>
+      <article class="mensaje" id="mensaje">
+    </article>
+    </form>
     <main class="cont">
       <header class="header-cont">
-        <h2 class="title">Mantenimiento</h2>
+        <h2 class="title">Mantenimiento Usuarios</h2>
       </header>
-      <form class="form" id="form">
-        <input class="input" type="search" name="user" />
-        <button class="btn" type="submit">
-          <span name="user">Buscar</span>
-        </button>
-      </form>
       <article class="info">
         <div class="informacion" id="info-user">
           <div class="info__title">Usuario</div>
@@ -25,19 +36,28 @@
         <div class="informacion" id="info-password">
           <div class="info__title">Contraseña</div>
         </div>
+        <div class="informacion" id="accion">
+          <div class="info__title">Accion</div>
+          </article>
+          </article>
+        </div>
       </article>
     </main>
     <aside class="navbar">
+      <article class="navbar__title"><h3>Matenimiento</h3></article>
       <nav class="nav">
-        <ul>
-          <li><a href="http://">Usuarios</a></li>
-        </ul>
-        <ul>
-          <li><a href="http://">Productos</a></li>
-        </ul>
+        <li class="nav__item">
+          <a class="item__a" href="index-admin.html">Usuarios</a>
+        </li>
+        <li class="nav__item">
+          <a class="item__a" href="#">Productos</a>
+        </li>
+        <li class="nav__item"><a class="item__a" href="#">Acerda de</a></li>
       </nav>
-      <button class="user__btn" id="close">Cerrar sesion</button>
-      <p>Version 1.3</p>
+      <article class="nav__info">
+        <button class="btn btn-close" id="close">Cerrar sesion</button>
+        <p class="version">Version 1.4</p>
+      </article>
     </aside>
     <script src="js/datos.js"></script>
     <script src="js/validar.js"></script>
