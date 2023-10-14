@@ -6,10 +6,15 @@
     <title>Tienda</title>
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carrito.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Asap&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/15e1e14d1b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -30,26 +35,11 @@
       <section class="user">
         <article class="user__name" id="username"></article>
         <article class="user__info" id="info">
-          <div class="carrito">
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M6 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-              <path d="M17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-              <path d="M17 17H6V3H4"></path>
-              <path d="m6 5 14 1-1 7H6"></path>
-            </svg>
+          <div class="carrito" id="carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
             <span class="carrito__text">Tu carrito</span>
           </div>
-          <button class="user__btn" id="close">Cerrar sesion</button>
+          <button class="btn user__btn" id="close">Cerrar sesion</button>
         </article>
       </section>
     </header>
@@ -58,11 +48,7 @@
         <article class="card">
           <h3 class="card__title">Producto 1</h3>
           <figure class="card__img-cont">
-            <img
-              class="card__img"
-              src="assets/pexels-alex-blokstra-1327373.webp"
-              alt=""
-            />
+            <img class="card__img" src="assets/16855479695081.jpg" alt="" />
           </figure>
           <p class="card__description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
@@ -71,34 +57,15 @@
             earum architecto.
           </p>
           <p class="card__precio">$10</p>
-          <button class="btn">
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-              <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
-              <path
-                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
-              ></path></svg
-            ><span>Añadir al carrito</span>
+          <button class="btn add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Añadir al carrito
           </button>
         </article>
         <article class="card">
-          <h3 class="card__title">Producto 1</h3>
+          <h3 class="card__title">Producto 2</h3>
           <figure class="card__img-cont">
-            <img
-              class="card__img"
-              src="assets/pexels-alex-blokstra-1327373.webp"
-              alt=""
-            />
+            <img class="card__img" src="assets/170007-500-auto.webp" alt="" />
           </figure>
           <p class="card__description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
@@ -107,16 +74,12 @@
             earum architecto.
           </p>
           <p class="card__precio">$10</p>
-          <button class="btn"><span>Añadir al carrito</span></button>
+          <button class="btn add__cart">Añadir al carrito</button>
         </article>
         <article class="card">
-          <h3 class="card__title">Producto 1</h3>
+          <h3 class="card__title">Producto 3</h3>
           <figure class="card__img-cont">
-            <img
-              class="card__img"
-              src="assets/pexels-alex-blokstra-1327373.webp"
-              alt=""
-            />
+            <img class="card__img" src="assets/178140-800-600.webp" alt="" />
           </figure>
           <p class="card__description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
@@ -125,16 +88,12 @@
             earum architecto.
           </p>
           <p class="card__precio">$10</p>
-          <button class="btn"><span>Añadir al carrito</span></button>
+          <button class="btn add__cart">Añadir al carrito</button>
         </article>
         <article class="card">
-          <h3 class="card__title">Producto 1</h3>
+          <h3 class="card__title">Producto 4</h3>
           <figure class="card__img-cont">
-            <img
-              class="card__img"
-              src="assets/pexels-alex-blokstra-1327373.webp"
-              alt=""
-            />
+            <img class="card__img" src="assets/203973-800-600.webp" alt="" />
           </figure>
           <p class="card__description">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores,
@@ -143,12 +102,24 @@
             earum architecto.
           </p>
           <p class="card__precio">$10</p>
-          <button class="btn"><span>Añadir al carrito</span></button>
+          <button class="btn add__cart">Añadir al carrito</button>
         </article>
       </section>
     </main>
+    <aside class="cart">
+      <h2 class="cart__title">Tu carrito</h2>
+      <section class="cart__content"></section>
+      <section class="total">
+        <article class="total__title">Total</article>
+        <p class="total__price">$0</p>
+      </section>
+      <button class="btn btn-buy">
+        <span>Comprar Ahora</span>
+      </button>
+      <i class="fa-solid fa-x close__cart" id="closeCart"></i>
+    </aside>
     <script src="js/usuario.js"></script>
-    <script src="js/validar.js"></script>
+    <script src="js/carrito.js"></script>
     <script src="js/close.js"></script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 const closeUrl = "http://localhost/prueba-projec_final/index/php/close.php";
 const sesionClose = document.getElementById("close");
-const info = document.getElementById("info");
 
 async function close() {
   try {

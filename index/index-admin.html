@@ -9,39 +9,81 @@
   <body>
     <form class="form-modificar" id="formModificar">
       <article class="form-modificar__header">
-        <svg class="cerrar__modal" id="cerrar__modal" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="m18.75 6.82-1.57-1.57L12 10.43 6.82 5.25 5.25 6.82 10.43 12l-5.18 5.18 1.57 1.57L12 13.57l5.18 5.18 1.57-1.57L13.57 12l5.18-5.18Z"></path>
-      </svg>
-      <h3>Modificar Usuario</h3>
+        <svg
+          class="cerrar__modal"
+          id="cerrar__modal"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m18.75 6.82-1.57-1.57L12 10.43 6.82 5.25 5.25 6.82 10.43 12l-5.18 5.18 1.57 1.57L12 13.57l5.18 5.18 1.57-1.57L13.57 12l5.18-5.18Z"
+          ></path>
+        </svg>
+        <h3>Modificar Usuario</h3>
       </article>
       <article class="contra">
-        <label for="inputUser">Nombre de Usuari0</label><input class="form-modificar__input" type="text" id="inputUser" name="user">
-        <label for="contra">Nueva Contraseña</label><input class="form-modificar__input" type="text" id="contra" name="newpassword">
-        <label for="newcontra">Confirmar Contraseña</label><input class="form-modificar__input" type="text" id="newcontra" name="confirmpassword">
+        <label for="inputUser">Nombre de Usuari0</label
+        ><input
+          class="form-modificar__input"
+          type="text"
+          id="inputUser"
+          name="user"
+        />
+        <label for="contra">Nueva Contraseña</label
+        ><input
+          class="form-modificar__input"
+          type="text"
+          id="contra"
+          name="newpassword"
+        />
+        <label for="newcontra">Confirmar Contraseña</label
+        ><input
+          class="form-modificar__input"
+          type="text"
+          id="newcontra"
+          name="confirmpassword"
+        />
       </article>
       <article class="form-modificar__btn">
         <button class="btn">Guardar cambios</button>
       </article>
-      <article class="mensaje" id="mensaje">
-    </article>
+      <article class="mensaje" id="mensaje"></article>
     </form>
-    <main class="cont">
+    <main class="cont" id="cont">
       <header class="header-cont">
         <h2 class="title">Mantenimiento Usuarios</h2>
       </header>
-      <article class="info">
-        <div class="informacion" id="info-user">
+      <section class="info">
+        <article class="informacion" id="info-user">
           <div class="info__title">Usuario</div>
-        </div>
-        <div class="informacion" id="info-password">
+        </article>
+        <article class="informacion" id="info-password">
           <div class="info__title">Contraseña</div>
-        </div>
-        <div class="informacion" id="accion">
+        </article>
+        <article class="informacion" id="accion">
           <div class="info__title">Accion</div>
-          </article>
-          </article>
-        </div>
-      </article>
+        </article>
+      </section>
+      <section class="mensajeEliminar" id="mensajeEliminar">
+        <svg
+          class="cerrar__modal cerr cerrar__modal-eliminar"
+          id="cerrar__modal-eliminar"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m18.75 6.82-1.57-1.57L12 10.43 6.82 5.25 5.25 6.82 10.43 12l-5.18 5.18 1.57 1.57L12 13.57l5.18 5.18 1.57-1.57L13.57 12l5.18-5.18Z"
+          ></path>
+        </svg>
+        <p class="mensaje__eliminar">Esta seguro de eliminar este usuario</p>
+        <button class="btn btn-elimar" id="btnEliminar">Si</button>
+      </section>
     </main>
     <aside class="navbar">
       <article class="navbar__title"><h3>Matenimiento</h3></article>
@@ -55,12 +97,13 @@
         <li class="nav__item"><a class="item__a" href="#">Acerda de</a></li>
       </nav>
       <article class="nav__info">
+        <article class="user__name" id="username"></article>
         <button class="btn btn-close" id="close">Cerrar sesion</button>
-        <p class="version">Version 1.4</p>
+        <p class="version">Version 1.4.2</p>
       </article>
     </aside>
+    <script src="js/usuario.js"></script>
     <script src="js/datos.js"></script>
-    <script src="js/validar.js"></script>
     <script src="js/close.js"></script>
   </body>
 </html>

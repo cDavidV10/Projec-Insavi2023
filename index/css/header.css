@@ -93,6 +93,7 @@
   width: 200px;
   transform: translateX(110%);
   transition: transform 300ms ease;
+  background-color: #fafafa;
 }
 
 .user__info--activo {
@@ -106,6 +107,7 @@
   align-items: center;
   gap: 0.5rem;
   color: #000;
+  cursor: pointer;
 }
 
 .carrito__text {

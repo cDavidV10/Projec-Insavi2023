@@ -33,6 +33,9 @@ async function api() {
       mensaje.classList.add("mensaje__error");
       mensaje.textContent = "El usuario ya existe";
       res.appendChild(mensaje);
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 2000);
       form.reset();
     }
   } catch (error) {
