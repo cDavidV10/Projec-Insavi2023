@@ -9,11 +9,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/carrito.css" />
+    <script
+      src="https://kit.fontawesome.com/15e1e14d1b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
-      <section class="title"><h1>Titulo</h1></section>
+      <section class="title">
+        <h1>SuperMercado</h1>
+      </section>
       <nav class="nav">
         <ul class="nav__ul">
           <li class="nav__item">
@@ -26,33 +33,619 @@
         </ul>
       </nav>
       <section class="user">
-        <article class="user__name" id="username"></article>
+        <article class="user__name" id="username">David</article>
         <article class="user__info" id="info">
-          <div class="carrito">
-            <svg
-              width="24"
-              height="24"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M6 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-              <path d="M17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
-              <path d="M17 17H6V3H4"></path>
-              <path d="m6 5 14 1-1 7H6"></path>
-            </svg>
+          <div class="carrito" id="carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
             <span class="carrito__text">Tu carrito</span>
           </div>
-          <button class="user__btn" id="close">Cerrar sesion</button>
+          <p class="version">Version 1.4.5</p>
+          <button class="btn user__btn" id="close">Cerrar sesion</button>
         </article>
       </section>
     </header>
+    <main class="content">
+      <section class="navbar-products">
+        <ul class="navbarproducts__ul">
+          <li class="navbarproducts__item">
+            <a href="#granos" class="navbarproducts__a">Granos</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#bebidas" class="navbarproducts__a">Bebidas</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#carnes" class="navbarproducts__a">Carnes</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#frutas" class="navbarproducts__a">Frutas</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#verduras" class="navbarproducts__a">Verduras</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#snacks" class="navbarproducts__a">Snacks</a>
+          </li>
+        </ul>
+      </section>
+      <div class="contenido">
+        <article class="titulo">
+          <h2 id="granos">Granos</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">GraNuts</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\granos.4.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Granos De Almendras tostadas</p>
+            <p class="card__precio">$4</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Granos De Mani</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\granos.2.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Granos De Mani Tostado</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Arroz San Pedro</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\granos.3.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Libra De Arroz San Pedro</p>
+            <p class="card__precio">$0.70</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Almendras BORGES</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\granos.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Granos De Almendra Tostada</p>
+            <p class="card__precio">$3</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Avena Grano De Oro</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\granos.1.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Avena En Polvo</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Granos De Cafe</h3>
+          <figure class="card__img-cont">
+            <img class="card__img" src="assets\cafe.jpeg" alt="" />
+          </figure>
+          <p class="card__description">Cafe negro</p>
+          <p class="card__precio">$4</p>
+          <button class="btn add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+          </button>
+        </article>
+      </article>
+      <article class="card">
+        <h3 class="card__title">Maiz</h3>
+        <figure class="card__img-cont">
+          <img class="card__img" src="assets\mamiz.jpeg" alt="" />
+        </figure>
+        <p class="card__description">Granos de Maiz</p>
+        <p class="card__precio">$2</p>
+        <button class="btn add__cart">
+          <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+        </button>
+      </article>
+    </article>
+    <article class="card">
+      <h3 class="card__title">Frijol</h3>
+      <figure class="card__img-cont">
+        <img class="card__img" src="assets\frijol.jpeg" alt="" />
+      </figure>
+      <p class="card__description">libra de frijol</p>
+      <p class="card__precio">$2</p>
+      <button class="btn add__cart">
+        <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+      </button>
+    </article>
+        </section>
+        <article class="titulo">
+          <h2 id="bebidas">Bebidas</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">V8 Sabor fresa</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\bebida.fresa.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Bebida Refrescante sabor Fresa</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Pespsi Lata</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets/170007-500-auto.webp" alt="" />
+            </figure>
+            <p class="card__description">Pepsi Enlatada</p>
+            <p class="card__precio">$0.80</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Gatorade</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\bebida.gatorade.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Gatorade Sabor Azul</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Powerade</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\bebida,power.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Powerade Sabor Azul</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Coca Cola</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\bebida,coca.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Coca Cola 2LT</p>
+            <p class="card__precio">$2.10</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Fanta</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\Gaseosa-marca-Fanta-naranja-regular-600-ml-1-26336.webp" alt="" />
+            </figure>
+            <p class="card__description">Bebida Refrescante Fanta 1.5LT</p>
+            <p class="card__precio">$1.50</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Fresca</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\1c72b73ecce27d284ba87cf75ef96930889537ec_smallbw.jpg" alt="" />
+            </figure>
+            <p class="card__description">Bebida Refrescante Fresca Enlatada</p>
+            <p class="card__precio">$0.80</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Mirinda</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\313387-800-450.webp" alt="" />
+            </figure>
+            <p class="card__description">Mirinda 2LT</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </section>
+        <article class="titulo">
+          <h2 id="carnes">Carnes</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">Chorizo Argentino</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\salchicha argentina.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Chorizo Argentino Pack </p>
+            <p class="card__precio">$5</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Salchicha</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\salchicha.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Salchicha Para Hot Dog</p>
+            <p class="card__precio">$5</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Carne De Pavo</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\pavo.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Carne De Pavo pack</p>
+            <p class="card__precio">$10</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Hueso De Res</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\hueso.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Hueso De Res pack</p>
+            <p class="card__precio">$15</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Pechuga De Pollo</h3>
+            <figure class="card__img-cont">
+            <img class="card__img" src="assets\pollo.jpeg" alt="" />
+          </figure>
+          <p class="card__description">Pechuga De Pollo Pack</p>
+          <p class="card__precio">$8</p>
+          <button class="btn add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+          </button>
+          </article>
+          </article>
+          <article class="card">
+          <h3 class="card__title">Carne Molida</h3>
+          <figure class="card__img-cont">
+          <img class="card__img" src="assets\carne molida.jpeg" alt="" />
+          </figure>
+          <p class="card__description">Carne Molida pack</p>
+          <p class="card__precio">$10</p>
+          <button class="btn add__cart">
+          <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+          </button>
+          </article>
+          <article class="card">
+          <h3 class="card__title">Carne De Cerdo</h3>
+          <figure class="card__img-cont">
+          <img class="card__img" src="assets\cerdo.jpeg" alt="" />
+          </figure>
+          <p class="card__description">Carne De Cerdo Pack</p>
+          <p class="card__precio">$9</p>
+          <button class="btn add__cart">
+          <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+          </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Carne De Res</h3>
+            <figure class="card__img-cont">
+            <img class="card__img" src="assets\res.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Carne De Res pack</p>
+            <p class="card__precio">$12</p>
+            <button class="btn add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </section>
+        <article class="titulo">
+          <h2 id="frutas">Frutas</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">Licha</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\licha.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Licha Dulce libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">manzana</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\manzana.roja.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Manzana libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Manzana Verde</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\manzana.verde.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Manzana Verde libra</p>
+            <p class="card__precio">$3</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Melon</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\melon.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Melon Dulce</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Naranja</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\naranja.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Naranja Dulce libra</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Papaya</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\papaya.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Papaya Fresca</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Uva Verde</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\uva.verde.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Uva Verde libra</p>
+            <p class="card__precio">$4</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Uva</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\uva.morada.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Uva libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </section>
+        <article class="titulo">
+          <h2 id="verduras">Verduras</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">Ajo</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\ajo.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Ajo libra</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Tomate</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\tomate.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Tomate libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Papa</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\papa.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Papa Soloma libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Guisquil</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\guisquil.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Guisquil libra</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Chile</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\chile.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Chile Verde libra</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Coliflor</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\coliflor.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Coliflor Fresco</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Cebolla</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\cebolla.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Cebolla blanca libra</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Bocoli</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\brocoli.jpeg" alt="" />
+            </figure>
+            <p class="card__description">Brocoli fresco</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </section>
+        <article class="titulo">
+          <h2 id="snacks">Snacks</h2>
+        </article>
+        <section class="productos">
+          <article class="card">
+            <h3 class="card__title">Jalapeños</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\RENDER_JALAPENOS_300g_FRONT.webp" alt="" />
+            </figure>
+            <p class="card__description">Jalapeños Diana</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Diana MIX</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\nachos y churritos mixtos.webp" alt="" />
+            </figure>
+            <p class="card__description">Churrito y Nachos Diana MIX</p>
+            <p class="card__precio">$1.50</p>
+            <button class="btn add__cart">
+            <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Snikers</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets/178140-800-600.webp" alt="" />
+            </figure>
+            <p class="card__description">Nuevo Sniker con Trozos de mani</p>
+            <p class="card__precio">$2</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Yummi Pops</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets/203973-800-600.webp" alt="" />
+            </figure>
+            <p class="card__description">Palomitas con Queso</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Pachanga MIX</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\Panchangas, churros.webp" alt="" />
+            </figure>
+            <p class="card__description">Pachanga MIX Diana</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Golosinas pino</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\IMG_8259_grande.webp" alt="" />
+            </figure>
+            <p class="card__description">Dulces De Goma Diana</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Ranchitas</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\63e3d92d83a994a21a0255721e037e15defeb8f5_smallbw.jpg" alt="" />
+            </figure>
+            <p class="card__description">Ranchitas Naturales</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Gomitas</h3>
+            <figure class="card__img-cont">
+              <img class="card__img" src="assets\Dulces_0014_Gomitastiburones1kg_1024x1024.webp" alt="" />
+            </figure>
+            <p class="card__description">Gomitas De Tiburones</p>
+            <p class="card__precio">$1</p>
+            <button class="btn add__cart">
+              <i class="fa-solid fa-cart-shopping"></i>Añadir al carrito
+            </button>
+          </article>
+        </section>
+      </div>
+    </main>
+    <aside class="cart">
+      <h2 class="cart__title">Tu carrito</h2>
+      <section class="cart__content"></section>
+      <section class="total">
+        <article class="total__title">Total</article>
+        <p class="total__price">$0</p>
+      </section>
+      <button class="btn btn-buy">
+        <span>Comprar Ahora</span>
+      </button>
+      <i class="fa-solid fa-x close__cart" id="closeCart"></i>
+    </aside>
   </body>
   <script src="js/usuario.js"></script>
-  <script src="js/validar.js"></script>
+  <script src="js/carrito.js"></script>
   <script src="js/close.js"></script>
 </html>

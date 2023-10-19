@@ -1,0 +1,47 @@
+.cont-equipo {
+  grid-template-rows: 5% 95%;
+}
+
+.header-cont-equipo {
+  grid-area: title;
+}
+
+.equipo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  grid-area: results;
+  min-height: 100vh;
+}
+
+.equipo__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "nombre nombre"
+    "foto foto";
+  border: solid 2px #000;
+  border-radius: 0.5rem;
+  height: 350px;
+  padding: 0.2rem;
+}
+
+.name {
+  display: grid;
+  place-items: center;
+  grid-area: nombre;
+}
+
+.card__img-cont {
+  grid-area: foto;
+  padding: 0.2rem;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}

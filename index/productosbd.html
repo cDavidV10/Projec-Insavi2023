@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/carrito.css" />
+    <script
+      src="https://kit.fontawesome.com/15e1e14d1b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="title">
+        <h1>SuperMercado</h1>
+      </section>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__item">
+            <a href="index-usuario.html" class="nav__a">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="productos.html" class="nav__a">Productos</a>
+          </li>
+          <li class="nav__item"><a href="" class="nav__a">Contacto</a></li>
+        </ul>
+      </nav>
+      <section class="user">
+        <article class="user__name" id="username">David</article>
+        <article class="user__info" id="info">
+          <div class="carrito" id="carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="carrito__text">Tu carrito</span>
+          </div>
+          <p class="version">Version 1.4.7</p>
+          <button class="btn user__btn" id="close">Cerrar sesion</button>
+        </article>
+      </section>
+    </header>
+    <main class="content">
+      <section class="navbar-products">
+        <ul class="navbarproducts__ul">
+          <li class="navbarproducts__item">
+            <a href="#granos" class="navbarproducts__a">Granos</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#bebidas" class="navbarproducts__a">Bebidas</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#carnes" class="navbarproducts__a">Carnes</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#frutas" class="navbarproducts__a">Frutas</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#verduras" class="navbarproducts__a">Verduras</a>
+          </li>
+          <li class="navbarproducts__item">
+            <a href="#snacks" class="navbarproducts__a">Snacks</a>
+          </li>
+        </ul>
+      </section>
+      <div class="contenido">
+        <article class="titulo">
+          <h2 id="granos">Productos</h2>
+        </article>
+        <section class="productos" id="productos"></section>
+      </div>
+    </main>
+    <aside class="cart">
+      <h2 class="cart__title">Tu carrito</h2>
+      <section class="cart__content"></section>
+      <section class="total">
+        <article class="total__title">Total</article>
+        <p class="total__price">$0</p>
+      </section>
+      <button class="btn btn-buy">
+        <span>Comprar Ahora</span>
+      </button>
+      <i class="fa-solid fa-x close__cart" id="closeCart"></i>
+    </aside>
+  </body>
+  <script src="js/usuario.js"></script>
+  <script src="js/productosCard.js"></script>
+  <script src="js/close.js"></script>
+</html>

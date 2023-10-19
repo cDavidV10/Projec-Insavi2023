@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/products.css" />
+  </head>
+  <body>
+    <main class="cont-form">
+      <h2 class="title">Almacenar productos</h2>
+      <form class="form-product" id="formProductos">
+        <article class="form__item">
+          <label class="label__form" for="categoria"
+            >Categoria del Producto</label
+          >
+          <select class="select" name="categoria" id="categoria">
+            <option class="select-value" disabled selected>
+              --Elige una Categoria--
+            </option>
+            <option class="select-value" value="bebida">Bebida</option>
+            <option class="select-value" value="granos">Granos</option>
+            <option class="select-value" value="carnes">Carnes</option>
+            <option class="select-value" value="frutas">Frutas</option>
+            <option class="select-value" value="verduras">Verduras</option>
+            <option class="select-value" value="snacks">Snacks</option>
+          </select>
+        </article>
+        <article class="form__item">
+          <label class="label__form" for="codigo">Codigo del producto</label>
+          <input
+            class="input__form"
+            type="text"
+            pattern="[0-9]{6}"
+            name="codigo"
+            id="codigo"
+            required
+          />
+        </article>
+        <article class="form__item">
+          <label class="label__form" for="name">Nombre del producto</label>
+          <input
+            class="input__form"
+            type="text"
+            name="nombre"
+            id="name"
+            required
+          />
+        </article>
+        <article class="form__item">
+          <label class="label__form" for="description">Descripcion</label>
+          <textarea
+            class="input__form input__form-description"
+            type="text"
+            name="descripcion"
+            id="description"
+            required
+          ></textarea>
+        </article>
+        <article class="form__item">
+          <label class="label__form" for="precio">Precio</label
+          ><input
+            class="input__form"
+            type="text"
+            pattern="\d\.\d{1,2}"
+            name="precio"
+            id="precio"
+            required
+          />
+        </article>
+        <article class="form__item">
+          <label class="label__form" for="cantidad">Cantidad Disponible</label
+          ><input
+            class="input__form"
+            type="text"
+            pattern="[0-9]{1,100000}"
+            name="stocks"
+            id="cantidad"
+            required
+          />
+        </article>
+        <button class="btn">
+          <span>Guardar</span>
+        </button>
+        <article class="mensaje-form" id="mensajeForm"></article>
+      </form>
+    </main>
+    <aside class="navbar">
+      <article class="navbar__title"><h3>Matenimiento</h3></article>
+      <nav class="nav">
+        <li class="nav__item">
+          <a class="item__a" href="index-admin.html">Usuarios</a>
+        </li>
+        <li class="nav__item">
+          <a class="item__a" href="agregar.html">Productos</a>
+        </li>
+        <li class="nav__item">
+          <a class="item__a" href="about.html">Acerda de</a>
+        </li>
+      </nav>
+      <article class="nav__info">
+        <article class="user__name" id="username"></article>
+        <button class="btn btn-close" id="close">Cerrar sesion</button>
+        <p class="version">Version 1.4.7</p>
+      </article>
+    </aside>
+  </body>
+  <script src="js/usuario.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/close.js"></script>
+</html>

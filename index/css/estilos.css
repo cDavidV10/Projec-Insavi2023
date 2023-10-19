@@ -114,6 +114,11 @@ body {
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: scale 300ms ease-in-out;
+}
+
+.btn:active {
+  scale: 0.9;
 }
 
 .info {
@@ -221,7 +226,7 @@ body {
   right: 0;
   padding: 1rem;
   border-left: solid 1px #000;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .navbar__title {

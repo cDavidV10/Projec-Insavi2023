@@ -10,12 +10,11 @@ $root = 10;
 
 $_SESSION['usuario'] = $user;
 
-
 if (!$conexion){
     echo json_encode("error");
 
     return;
-} 
+}
 
 function encriptar ($password, $root){
     for ($i = 0; $i < strlen ($password); $i++){

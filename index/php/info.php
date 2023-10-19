@@ -32,6 +32,7 @@ if (!$conexion){
     array_push($rows, $r);
 }
 
+
 foreach ($rows as $objeto) {
     $datos[] = array("user" => $objeto->user, "password" => encriptar($objeto->password, $root));
 }
